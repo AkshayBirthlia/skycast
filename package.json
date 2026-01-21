@@ -1,0 +1,23 @@
+{
+  "name": "skycast",
+  "version": "1.0.0",
+  "description": "This application is used for fetching weather data and representing to user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server ./app --port=5500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkshayBirthlia/skycast.git"
+  },
+  "author": "Akshay Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkshayBirthlia/skycast/issues"
+  },
+  "homepage": "https://github.com/AkshayBirthlia/skycast#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
