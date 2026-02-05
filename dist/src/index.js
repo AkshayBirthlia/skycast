@@ -76,6 +76,24 @@ async function updateDetails(cityName) {
     document.querySelector('#time').textContent = promiseForecast.location.localtime;
 
 }
+// temp changer
+let onOf = true;
+let tempChange = document.querySelector("#tempChange");
+tempChange.addEventListener('click', () => {
+    if (onOf == true) {
+        tempChange.innerHTML = `<sup>o</sup>F`;
+        document.querySelector('#clock').innerHTML = `<h4 id="clock">${promiseForecast.current.temp_c} <sup>o</sup>C</h4>`;
+        document.querySelector('#feelsLike').innerHTML = 'feels like ' + promiseForecast.current.feelslike_f + '<sup>o</sup>F';
+    }
+    else
+    {
+        tempChange.innerHTML = `<sup>o</sup>C`;
+
+        document.querySelector('#clock').innerHTML = `<h4 id="clock">${promiseForecast.current.temp_f} <sup>o</sup>F</h4>`;
+        document.querySelector('#feelsLike').innerHTML = 'feels like ' + promiseForecast.current.feelslike_c + '<sup>o</sup>C';
+    }
+    onOf = !onOf;
+})
 //current position fetch
 button.addEventListener("click", async () => {
     const currentPosition = navigator.geolocation.getCurrentPosition(

@@ -193,3 +193,9 @@ table {
 td , th {
 text-align: center;
 }
+#tempChange{
+  padding: .1rem;
+  border-radius: 5px;
+  border-color: rgb(0, 0, 0);
+  background-color: #cbf1f5;
+}
