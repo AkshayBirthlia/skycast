@@ -1,14 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/styles/style.css">
-</head>
-<body>
-    <h1>Skycast Weather App</h1>
-    <h2>Get the latest weather updates!</h2>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="box">
+        <div class="alignItem">
+          <button id="sideBar" class="icon">
+            <img
+              src="./assets/img/threeLines.png"
+              class="imgSize"
+              alt="sideBar"
+            />
+          </button>
+          <h4 id="logo">Skycast</h4>
+        </div>
+        <div class="alignItem">
+          <img
+            src="./assets/img/location4.png"
+            class="imgSize"
+            alt="location"
+          />
+          <h5 id="pinLocation">---, --- </h5>
+        </div>
+        <div class="alignItem searchBox">
+          <input id="inputSearch" type="text" placeholder="Search Location" />
+          <ul id="suggession"></ul>
+          <button id="locationBtn">
+            <img
+              src="./assets/img/location2.png"
+              id="locationImg"
+              class="searchSize"
+              alt="search"
+            />
+          </button>
+        </div>
+
+        <div class="alignItem theme">
+          <button class="icon">
+            <img
+              src="./assets/img/brightness.png"
+              class="imgSize"
+              alt="theme"
+            />
+          </button>
+          <h5>Light</h5>
+        </div>
+        <div>
+          <button class="icon">
+            <img
+              src="./assets/img/notification.png"
+              class="imgSize notification"
+              alt="notification"
+            />
+          </button>
+          <button class="icon">
+            <img
+              src="./assets/img/setting.png"
+              class="imgSize notification"
+              alt="setting"
+            />
+          </button>
+        </div>
+        <div class="alignItem">
+          <img src="./assets/img/profile.png" class="imgSize" alt="profile" />
+          <h5>Akshay Kumar</h5>
+          <button class="icon downIcon">
+            <img
+              src="./assets/img/downArrow.png"
+              class="imgSize downIcon"
+              alt="down-arrow"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="weather" class="box boxStyling">
+        <div id="weatherTop" >
+          <h5>Current Weather     <button  id="tempChange"><sup>o</sup>C</button></h5>
+          <div>
+            <div class="alignItem">
+              <h5>Forenheight</h5>
+              <button class="icon downIcon">
+                <img
+                  src="./assets/img/downArrow.png"
+                  class="imgSize downIcon"
+                  alt="down-arrow"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <h4 id="time">---</h4>
+        <div class="dial">
+          <img src="./assets/img/sun-rain.png" alt="rain" class="imgSize1" />
+          <h4 id="clock"> </h4>
+          <div>
+            <h5 id="conditionTxt">--</h5>
+            <h5 id="feelsLike">---<sup>o</sup></h5>
+          </div>
+        </div>
+        <h5>Every day get up with a fresh Energy.</h5>
+      </div>
+      <div id="cast" class="box boxStyling">
+        <div>
+          <button class="theme" id="today">Today</button>
+          <button class="theme" id="days">12 Days</button>
+        </div>
+        <table id="tableId">
+         <tr>
+          <th id="tbTh1">Time</th>
+          <th id="tbTh2">Weather</th>
+          <th id="tbTh3">Temp :</th>
+        </tr>
+        </table>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex" >
+          <img class="imgSize" src="./assets/img/cloud1.png" alt="cloud" />
+          <h5>Cloud</h5>
+        </div>
+        <h2 id="cloud">---</h2>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex">
+          <img class="imgSize" src="./assets/img/wind.png" alt="wind" />
+          <h5>Wind</h5>
+        </div>
+        <h2 id="wind">---</h2>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex">
+          <img class="imgSize" src="./assets/img/humidity.png" alt="humidity" />
+          <h5>humidity</h5>
+        </div>
+        <h2 id="humidity">---</h2>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex">
+          <img
+            class="imgSize"
+            src="./assets/img/air-pressure.png"
+            alt="pressure"
+          />
+          <h5>Air pressure</h5>
+        </div>
+        <h2 id="airPressure">---</h2>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex">
+          <img class="imgSize" src="./assets/img/rainInMm.png" alt="RainInMm" />
+          <h5>Rain in mm</h5>
+        </div>
+        <h2 id="rainMm">---</h2>
+      </div>
+      <div class="box boxStyling">
+        <div style="display: flex">
+          <img class="imgSize" src="./assets/img/uv-protection.png" alt="uv" />
+          <h5>UV</h5>
+        </div>
+        <h2 id="uv">---</h2>
+      </div>
+
+      <div id="summary" class="box boxStyling">
+        <div id="sun">
+          <div class="aline">
+            <img src="./assets/img/sunrise.png" alt="sunrise" class="sunSize" />
+            <div>
+              <h5>sunrise</h5>
+              <h6 id="sunRiseTime">---</h6>
+            </div>
+          </div>
+          <div class="aline">
+            <img src="./assets/img/sunset.png" alt="sunset" class="sunSize" />
+            <div>
+              <h5>sunset</h5>
+              <h6 id="sunSetTime">---</h6>
+            </div>
+          </div>
+        </div>
+        <div id="moon">
+          <div class="aline">
+            <img
+              src="./assets/img/moonrise.png"
+              alt="moonrise"
+              class="sunSize"
+            />
+            <div>
+              <h5>moonrise</h5>
+              <h6 id="moonRiseTime">---</h6>
+            </div>
+          </div>
+          <div class="aline">
+            <img src="./assets/img/moonset.png" alt="moonset" class="imgSize" />
+            <div>
+              <h5>moonset</h5>
+              <h6 id="moonSetTime">---</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="./src/index.js" type="module"></script>
-</body>
+  </body>
 </html>
